@@ -9,12 +9,25 @@ async function pingas(){
   }
 }
 
+function getEmoji(){
+  if (city.innerHTML == 'Parcialmente Nublado'){
+    document.getElementById("emoji").innerHTML = "☁️";
+  } else{
+    document.getElementById("emoji").innerHTML = "CCC";
+  }
+}
     
 
 //pingas()
 
 
-
+function convertDate(isoDate) {
+  // Split the date string into parts
+  const parts = isoDate.split('-');
+  
+  // Rearrange parts to DD/MM/YYYY format
+  return `${parts[2]}/${parts[1]}/${parts[0]}`;
+}
 
 
 async function climaFortal() {
@@ -35,7 +48,12 @@ async function climaFortal() {
  minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
 
  let data1 = document.getElementById("data1");
- data1.innerHTML = data.clima[1].data;
+
+
+
+
+ 
+ data1.innerHTML = convertDate(data.clima[1].data);
 
  let p1 = document.getElementById("p1");
  p1.innerHTML = data.clima[1].condicao_desc;
@@ -46,7 +64,7 @@ async function climaFortal() {
 //
 
  let data2 = document.getElementById("data2");
- data2.innerHTML = data.clima[2].data;
+ data2.innerHTML = convertDate(data.clima[2].data);
 
  let p2 = document.getElementById("p2");
  p2.innerHTML = data.clima[2].condicao_desc;
@@ -57,7 +75,7 @@ async function climaFortal() {
 //
 
  let data3 = document.getElementById("data3");
- data3.innerHTML = data.clima[3].data;
+ data3.innerHTML = convertDate(data.clima[3].data);
 
  let p3 = document.getElementById("p3");
  p3.innerHTML = data.clima[3].condicao_desc;
@@ -69,7 +87,7 @@ async function climaFortal() {
 
  
  let data4 = document.getElementById("data4");
- data4.innerHTML = data.clima[4].data;
+ data4.innerHTML = convertDate(data.clima[4].data);
 
  let p4 = document.getElementById("p4");
  p4.innerHTML = data.clima[4].condicao_desc;
@@ -79,7 +97,7 @@ async function climaFortal() {
 
  document.getElementById("days").style.display = "block";
 
-
+ getEmoji()
 }
 
 
@@ -112,7 +130,7 @@ async function climaSP() {
   minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
  
   let data1 = document.getElementById("data1");
-  data1.innerHTML = data.clima[1].data;
+  data1.innerHTML = convertDate(data.clima[1].data);
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -123,7 +141,7 @@ async function climaSP() {
  //
  
   let data2 = document.getElementById("data2");
-  data2.innerHTML = data.clima[2].data;
+  data2.innerHTML = convertDate(data.clima[2].data);
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -134,7 +152,7 @@ async function climaSP() {
  //
  
   let data3 = document.getElementById("data3");
-  data3.innerHTML = data.clima[3].data;
+  data3.innerHTML = convertDate(data.clima[3].data);
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -146,7 +164,7 @@ async function climaSP() {
  
   
   let data4 = document.getElementById("data4");
-  data4.innerHTML = data.clima[4].data;
+  data4.innerHTML = convertDate(data.clima[4].data);
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -180,7 +198,7 @@ async function climaSP() {
   minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
  
   let data1 = document.getElementById("data1");
-  data1.innerHTML = data.clima[1].data;
+  data1.innerHTML = convertDate(data.clima[1].data);
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -191,7 +209,7 @@ async function climaSP() {
  //
  
   let data2 = document.getElementById("data2");
-  data2.innerHTML = data.clima[2].data;
+  data2.innerHTML = convertDate(data.clima[2].data);
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -202,7 +220,7 @@ async function climaSP() {
  //
  
   let data3 = document.getElementById("data3");
-  data3.innerHTML = data.clima[3].data;
+  data3.innerHTML = convertDate(data.clima[3].data);
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -214,7 +232,7 @@ async function climaSP() {
  
   
   let data4 = document.getElementById("data4");
-  data4.innerHTML = data.clima[4].data;
+  data4.innerHTML = convertDate(data.clima[4].data);
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -246,7 +264,7 @@ async function climaBrasilia() {
   minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
  
   let data1 = document.getElementById("data1");
-  data1.innerHTML = data.clima[1].data;
+  data1.innerHTML = convertDate(data.clima[1].data);
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -257,7 +275,7 @@ async function climaBrasilia() {
  //
  
   let data2 = document.getElementById("data2");
-  data2.innerHTML = data.clima[2].data;
+  data2.innerHTML = convertDate(data.clima[2].data);
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -268,7 +286,7 @@ async function climaBrasilia() {
  //
  
   let data3 = document.getElementById("data3");
-  data3.innerHTML = data.clima[3].data;
+  data3.innerHTML = convertDate(data.clima[3].data);
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -280,7 +298,7 @@ async function climaBrasilia() {
  
   
   let data4 = document.getElementById("data4");
-  data4.innerHTML = data.clima[4].data;
+  data4.innerHTML = convertDate(data.clima[4].data);
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -313,7 +331,7 @@ async function climaBrasilia() {
   minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
  
   let data1 = document.getElementById("data1");
-  data1.innerHTML = data.clima[1].data;
+  data1.innerHTML = convertDate(data.clima[1].data);
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -324,7 +342,7 @@ async function climaBrasilia() {
  //
  
   let data2 = document.getElementById("data2");
-  data2.innerHTML = data.clima[2].data;
+  data2.innerHTML = convertDate(data.clima[2].data);
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -335,7 +353,7 @@ async function climaBrasilia() {
  //
  
   let data3 = document.getElementById("data3");
-  data3.innerHTML = data.clima[3].data;
+  data3.innerHTML = convertDate(data.clima[3].data);
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -347,7 +365,7 @@ async function climaBrasilia() {
  
   
   let data4 = document.getElementById("data4");
-  data4.innerHTML = data.clima[4].data;
+  data4.innerHTML = convertDate(data.clima[4].data);
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -382,7 +400,7 @@ async function climaBrasilia() {
   minmax.innerHTML = 'Mínima de '+ data.clima[0].min +', Máxima de ' +data.clima[0].max
  
   let data1 = document.getElementById("data1");
-  data1.innerHTML = data.clima[1].data;
+  data1.innerHTML = convertDate(data.clima[1].data);
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -393,7 +411,7 @@ async function climaBrasilia() {
  //
  
   let data2 = document.getElementById("data2");
-  data2.innerHTML = data.clima[2].data;
+  data2.innerHTML = convertDate(data.clima[2].data);
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -404,7 +422,7 @@ async function climaBrasilia() {
  //
  
   let data3 = document.getElementById("data3");
-  data3.innerHTML = data.clima[3].data;
+  data3.innerHTML = convertDate(data.clima[3].data);
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -416,7 +434,7 @@ async function climaBrasilia() {
  
   
   let data4 = document.getElementById("data4");
-  data4.innerHTML = data.clima[4].data;
+  data4.innerHTML = convertDate(data.clima[4].data);
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
