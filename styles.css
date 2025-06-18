@@ -18,3 +18,14 @@
 #emoji1, #emoji2, #emoji3, #emoji4, #emoji5 {
     font-size: 50px;
 }
+
+#userCity{
+    margin-left: 10px;
+    
+}
+
+#button{
+    margin-left: 10px;
+    border-radius: 20%;
+}
+
