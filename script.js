@@ -747,9 +747,20 @@ console.log(data0.cidades)
 
 let cidadeNum;
 
-
+if (Array.isArray(data0.cidades.cidade)){
   cidadeNum = data0.cidades.cidade[0].id;
- 
+}else{
+  cidadeNum = data0.cidades.cidade.id;
+
+}
+
+
+
+
+
+
+  //cidadeNum = data0.cidades.cidade[0].id;
+  //cidadeNum = data0.cidades.cidade.id;
 
 
 
