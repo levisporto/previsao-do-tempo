@@ -125,7 +125,7 @@ function getEmoji(n){
 
  document.getElementById("days").style.display = "block";
 
- getEmoji()
+
 }
 
 
