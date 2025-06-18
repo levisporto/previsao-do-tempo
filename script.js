@@ -1,5 +1,5 @@
 
-async function pingas(){
+async function previsao(){
   for(let step = 200; step < 250; step++){
 
     let response = await fetch(`https://brasilapi.com.br/api/cptec/v1/clima/previsao/${step}`);
@@ -9,16 +9,10 @@ async function pingas(){
   }
 }
 
-function getEmoji(){
-  if (city.innerHTML == 'Parcialmente Nublado'){
-    document.getElementById("emoji").innerHTML = "☁️";
-  } else{
-    document.getElementById("emoji").innerHTML = "CCC";
-  }
-}
+
     
 
-//pingas()
+//previsao()
 
 
 function convertDate(isoDate) {
@@ -37,8 +31,32 @@ async function climaFortal() {
  let data = await response.json();
  console.log(data);
 
+let emoji;
+
+function getEmoji(n){
+  switch (data.clima[n].condicao_desc) {
+    case "Chuvas Isoladas":
+      emoji = '☔';
+      break;
+    case "Parcialmente Nublado":
+      emoji = '🌥️';
+      break;
+    case "Predomínio de Sol":
+      emoji = '☀️';
+      break;
+      case "Chuva":
+      emoji = '🌧️';
+      break;
+      case "Pancadas de Chuva":
+        emoji = '⛈️';
+        break;
+   }
+}
+ 
+
  let h1 = document.getElementById("h1");
- h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+ getEmoji(0)
+ h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
 
  let city = document.getElementById("city");
  city.innerHTML = data.clima[0].condicao_desc;
@@ -49,8 +67,8 @@ async function climaFortal() {
 
  let data1 = document.getElementById("data1");
 
-
-
+ getEmoji(1)
+ document.getElementById("emoji1").innerHTML = emoji;
 
  
  data1.innerHTML = convertDate(data.clima[1].data);
@@ -66,6 +84,10 @@ async function climaFortal() {
  let data2 = document.getElementById("data2");
  data2.innerHTML = convertDate(data.clima[2].data);
 
+ getEmoji(2)
+ document.getElementById("emoji2").innerHTML = emoji;
+
+
  let p2 = document.getElementById("p2");
  p2.innerHTML = data.clima[2].condicao_desc;
 
@@ -76,6 +98,9 @@ async function climaFortal() {
 
  let data3 = document.getElementById("data3");
  data3.innerHTML = convertDate(data.clima[3].data);
+
+ getEmoji(3)
+ document.getElementById("emoji3").innerHTML = emoji;
 
  let p3 = document.getElementById("p3");
  p3.innerHTML = data.clima[3].condicao_desc;
@@ -88,6 +113,9 @@ async function climaFortal() {
  
  let data4 = document.getElementById("data4");
  data4.innerHTML = convertDate(data.clima[4].data);
+
+ getEmoji(4)
+ document.getElementById("emoji4").innerHTML = emoji;
 
  let p4 = document.getElementById("p4");
  p4.innerHTML = data.clima[4].condicao_desc;
