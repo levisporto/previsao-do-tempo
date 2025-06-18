@@ -29,27 +29,3 @@
     border-radius: 20%;
 }
 
-#search-mobile {
-    display: none;
-    
-}
-
-@media (max-width: 600px) {
-   
-
-
-#search-mobile {
-    display: flex;
-}
-
-.btn-group input {
-    display: none;
-}
-
-.btn-group #button {
-    display: none;
-}
-
-
-
-  }
