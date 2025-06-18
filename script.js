@@ -737,7 +737,7 @@ function xmlToJson(xml) {
 console.log(inputedCity);
 
 
-const response0 = await fetch(`http://servicos.cptec.inpe.br/XML/listaCidades?city=${inputedCity}`);
+const response0 = await fetch(`https://corsproxy.io/?http://servicos.cptec.inpe.br/XML/listaCidades?city=${inputedCity}`);
 const xmlString = await response0.text();
 var XmlNode = new DOMParser().parseFromString(xmlString, 'text/xml');
 let data0 = xmlToJson(XmlNode);
