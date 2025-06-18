@@ -147,8 +147,33 @@ async function climaSP() {
   let data = await response.json();
   console.log(data);
  
+
+  let emoji;
+
+  function getEmoji(n){
+    switch (data.clima[n].condicao_desc) {
+      case "Chuvas Isoladas":
+        emoji = '☔';
+        break;
+      case "Parcialmente Nublado":
+        emoji = '🌥️';
+        break;
+      case "Predomínio de Sol":
+        emoji = '☀️';
+        break;
+        case "Chuva":
+        emoji = '🌧️';
+        break;
+        case "Pancadas de Chuva":
+          emoji = '⛈️';
+          break;
+     }
+  }
+   
+
+  getEmoji(0)
   let h1 = document.getElementById("h1");
-  h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+  h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
  
   let city = document.getElementById("city");
   city.innerHTML = data.clima[0].condicao_desc;
@@ -159,6 +184,9 @@ async function climaSP() {
  
   let data1 = document.getElementById("data1");
   data1.innerHTML = convertDate(data.clima[1].data);
+
+  getEmoji(1)
+ document.getElementById("emoji1").innerHTML = emoji;
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -170,6 +198,9 @@ async function climaSP() {
  
   let data2 = document.getElementById("data2");
   data2.innerHTML = convertDate(data.clima[2].data);
+
+  getEmoji(2)
+  document.getElementById("emoji2").innerHTML = emoji;
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -181,6 +212,9 @@ async function climaSP() {
  
   let data3 = document.getElementById("data3");
   data3.innerHTML = convertDate(data.clima[3].data);
+
+  getEmoji(3)
+  document.getElementById("emoji3").innerHTML = emoji;
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -193,6 +227,9 @@ async function climaSP() {
   
   let data4 = document.getElementById("data4");
   data4.innerHTML = convertDate(data.clima[4].data);
+
+  getEmoji(4)
+  document.getElementById("emoji4").innerHTML = emoji;
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -214,9 +251,34 @@ async function climaSP() {
   let response = await fetch(`https://brasilapi.com.br/api/cptec/v1/clima/previsao/241/6`);
   let data = await response.json();
   console.log(data);
- 
+
+  let emoji;
+
+  function getEmoji(n){
+    switch (data.clima[n].condicao_desc) {
+      case "Chuvas Isoladas":
+        emoji = '☔';
+        break;
+      case "Parcialmente Nublado":
+        emoji = '🌥️';
+        break;
+      case "Predomínio de Sol":
+        emoji = '☀️';
+        break;
+        case "Chuva":
+        emoji = '🌧️';
+        break;
+        case "Pancadas de Chuva":
+          emoji = '⛈️';
+          break;
+     }
+  }
+   
+
+  getEmoji(0)
   let h1 = document.getElementById("h1");
-  h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+  h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
+ 
  
   let city = document.getElementById("city");
   city.innerHTML = data.clima[0].condicao_desc;
@@ -227,6 +289,9 @@ async function climaSP() {
  
   let data1 = document.getElementById("data1");
   data1.innerHTML = convertDate(data.clima[1].data);
+
+  getEmoji(1)
+  document.getElementById("emoji1").innerHTML = emoji;
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -238,6 +303,9 @@ async function climaSP() {
  
   let data2 = document.getElementById("data2");
   data2.innerHTML = convertDate(data.clima[2].data);
+
+  getEmoji(2)
+  document.getElementById("emoji2").innerHTML = emoji;
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -249,6 +317,9 @@ async function climaSP() {
  
   let data3 = document.getElementById("data3");
   data3.innerHTML = convertDate(data.clima[3].data);
+
+  getEmoji(3)
+  document.getElementById("emoji3").innerHTML = emoji;
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -261,6 +332,9 @@ async function climaSP() {
   
   let data4 = document.getElementById("data4");
   data4.innerHTML = convertDate(data.clima[4].data);
+
+  getEmoji(4)
+  document.getElementById("emoji4").innerHTML = emoji;
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -281,8 +355,33 @@ async function climaBrasilia() {
   let data = await response.json();
   console.log(data);
  
+  let emoji;
+
+  function getEmoji(n){
+    switch (data.clima[n].condicao_desc) {
+      case "Chuvas Isoladas":
+        emoji = '☔';
+        break;
+      case "Parcialmente Nublado":
+        emoji = '🌥️';
+        break;
+      case "Predomínio de Sol":
+        emoji = '☀️';
+        break;
+        case "Chuva":
+        emoji = '🌧️';
+        break;
+        case "Pancadas de Chuva":
+          emoji = '⛈️';
+          break;
+     }
+  }
+   
+
+  getEmoji(0)
   let h1 = document.getElementById("h1");
-  h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+  h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
+ 
  
   let city = document.getElementById("city");
   city.innerHTML = data.clima[0].condicao_desc;
@@ -293,6 +392,9 @@ async function climaBrasilia() {
  
   let data1 = document.getElementById("data1");
   data1.innerHTML = convertDate(data.clima[1].data);
+
+  getEmoji(1)
+  document.getElementById("emoji1").innerHTML = emoji;
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -304,6 +406,9 @@ async function climaBrasilia() {
  
   let data2 = document.getElementById("data2");
   data2.innerHTML = convertDate(data.clima[2].data);
+
+  getEmoji(2)
+  document.getElementById("emoji2").innerHTML = emoji;
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -315,7 +420,10 @@ async function climaBrasilia() {
  
   let data3 = document.getElementById("data3");
   data3.innerHTML = convertDate(data.clima[3].data);
- 
+
+  getEmoji(3)
+  document.getElementById("emoji3").innerHTML = emoji;
+
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
  
@@ -327,6 +435,9 @@ async function climaBrasilia() {
   
   let data4 = document.getElementById("data4");
   data4.innerHTML = convertDate(data.clima[4].data);
+
+  getEmoji(4)
+  document.getElementById("emoji4").innerHTML = emoji;
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
@@ -348,8 +459,33 @@ async function climaBrasilia() {
   let data = await response.json();
   console.log(data);
  
+  let emoji;
+
+  function getEmoji(n){
+    switch (data.clima[n].condicao_desc) {
+      case "Chuvas Isoladas":
+        emoji = '☔';
+        break;
+      case "Parcialmente Nublado":
+        emoji = '🌥️';
+        break;
+      case "Predomínio de Sol":
+        emoji = '☀️';
+        break;
+        case "Chuva":
+        emoji = '🌧️';
+        break;
+        case "Pancadas de Chuva":
+          emoji = '⛈️';
+          break;
+     }
+  }
+   
+
+  getEmoji(0)
   let h1 = document.getElementById("h1");
-  h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+  h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
+ 
  
   let city = document.getElementById("city");
   city.innerHTML = data.clima[0].condicao_desc;
@@ -360,6 +496,9 @@ async function climaBrasilia() {
  
   let data1 = document.getElementById("data1");
   data1.innerHTML = convertDate(data.clima[1].data);
+
+  getEmoji(1)
+  document.getElementById("emoji1").innerHTML = emoji;
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -371,6 +510,9 @@ async function climaBrasilia() {
  
   let data2 = document.getElementById("data2");
   data2.innerHTML = convertDate(data.clima[2].data);
+
+  getEmoji(2)
+  document.getElementById("emoji2").innerHTML = emoji;
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -382,6 +524,9 @@ async function climaBrasilia() {
  
   let data3 = document.getElementById("data3");
   data3.innerHTML = convertDate(data.clima[3].data);
+
+  getEmoji(3)
+  document.getElementById("emoji3").innerHTML = emoji;
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -395,6 +540,9 @@ async function climaBrasilia() {
   let data4 = document.getElementById("data4");
   data4.innerHTML = convertDate(data.clima[4].data);
  
+  getEmoji(4)
+  document.getElementById("emoji4").innerHTML = emoji;
+
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;
  
@@ -417,8 +565,33 @@ async function climaBrasilia() {
   let data = await response.json();
   console.log(data);
  
+  let emoji;
+
+  function getEmoji(n){
+    switch (data.clima[n].condicao_desc) {
+      case "Chuvas Isoladas":
+        emoji = '☔';
+        break;
+      case "Parcialmente Nublado":
+        emoji = '🌥️';
+        break;
+      case "Predomínio de Sol":
+        emoji = '☀️';
+        break;
+        case "Chuva":
+        emoji = '🌧️';
+        break;
+        case "Pancadas de Chuva":
+          emoji = '⛈️';
+          break;
+     }
+  }
+   
+
+  getEmoji(0)
   let h1 = document.getElementById("h1");
-  h1.innerHTML = '☀️ ' + data.cidade + ', ' + data.estado;
+  h1.innerHTML = emoji + data.cidade + ', ' + data.estado;
+ 
  
   let city = document.getElementById("city");
   city.innerHTML = data.clima[0].condicao_desc;
@@ -429,6 +602,9 @@ async function climaBrasilia() {
  
   let data1 = document.getElementById("data1");
   data1.innerHTML = convertDate(data.clima[1].data);
+
+  getEmoji(1)
+  document.getElementById("emoji1").innerHTML = emoji;
  
   let p1 = document.getElementById("p1");
   p1.innerHTML = data.clima[1].condicao_desc;
@@ -440,6 +616,9 @@ async function climaBrasilia() {
  
   let data2 = document.getElementById("data2");
   data2.innerHTML = convertDate(data.clima[2].data);
+
+  getEmoji(2)
+  document.getElementById("emoji2").innerHTML = emoji;
  
   let p2 = document.getElementById("p2");
   p2.innerHTML = data.clima[2].condicao_desc;
@@ -451,6 +630,9 @@ async function climaBrasilia() {
  
   let data3 = document.getElementById("data3");
   data3.innerHTML = convertDate(data.clima[3].data);
+
+  getEmoji(3)
+  document.getElementById("emoji3").innerHTML = emoji;
  
   let p3 = document.getElementById("p3");
   p3.innerHTML = data.clima[3].condicao_desc;
@@ -463,6 +645,9 @@ async function climaBrasilia() {
   
   let data4 = document.getElementById("data4");
   data4.innerHTML = convertDate(data.clima[4].data);
+
+  getEmoji(4)
+  document.getElementById("emoji4").innerHTML = emoji;
  
   let p4 = document.getElementById("p4");
   p4.innerHTML = data.clima[4].condicao_desc;

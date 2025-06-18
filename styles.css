@@ -1,15 +1,20 @@
 #form {
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 8%;
+    margin-top: 4%;
 }
 
 
 #days {
     display: none;
-    
+    margin-bottom: 8%;
 }
 
 .row {
     row-gap: 15px !important
+}
+
+
+#emoji1, #emoji2, #emoji3, #emoji4, #emoji5 {
+    font-size: 50px;
 }
